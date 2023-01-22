@@ -3,6 +3,7 @@
  *
  *  Created on: 16/02/2022
  */
+ 
 .global start
 .data
 X: 		.word 0x03
