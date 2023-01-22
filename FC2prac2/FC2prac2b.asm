@@ -2,7 +2,6 @@
  * FC2prac2b.asm
  *
  *  Created on: 23/02/2022
- *      Author: danie
 	B)
 	#define N 8
 	int A[N]={7,3,25,4,75,2,1,1};
