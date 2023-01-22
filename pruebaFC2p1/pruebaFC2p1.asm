@@ -2,7 +2,6 @@
  * pruebaFC2p1.asm
  *
  *  Created on: 16/02/2022
- *      Author: danie
  */
 .global start
 .data
