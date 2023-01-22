@@ -8,6 +8,7 @@
 		C = C + 1
  	}
  */
+ 
  .global start
  .data
  A:		.word 0x06
