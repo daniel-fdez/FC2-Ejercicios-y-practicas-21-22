@@ -2,7 +2,6 @@
  * FC2Ejer3.asm
  *
  *  Created on: 21/02/2022
- *      Author: danie
  	if (x >= y) {
 		x = x+2;
 		y = y+2;
