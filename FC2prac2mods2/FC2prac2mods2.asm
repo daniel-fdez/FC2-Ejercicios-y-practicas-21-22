@@ -2,10 +2,9 @@
  * FC2prac2_mods2.asm
  *
  *  Created on: 10/03/2022
- *      Author: usuario_local
  */
 .global start
-.equ N,8 @ Constante que determina el tamaño de los arrays
+.equ N,8 @ Constante que determina el tamaÃ±o de los arrays
 .data
 A: .word 7,3,25,4,75,2,1,1 @ Array sobre el que operar
 .bss
