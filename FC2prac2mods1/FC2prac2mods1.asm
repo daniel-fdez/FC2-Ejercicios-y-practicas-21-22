@@ -2,10 +2,9 @@
  * FC2prac2_mods.asm
  *
  *  Created on: 10/03/2022
- *      Author: usuario_local
  */
 .global start
-.equ N,8 @ Constante que determina el tamaño de los arrays
+.equ N,8 @ Constante que determina el tamaÃ±o de los arrays
 .data
 A: .word 7,3,25,4,75,2,1,1 @ Array sobre el que operar
 NumMay: .word 0 @ Variable que guarda el numero de valores mayores que 5 del array A
