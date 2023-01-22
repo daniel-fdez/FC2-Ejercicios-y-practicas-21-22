@@ -2,7 +2,6 @@
  * FC2prac1.asm
  *
  *  Created on: 16/02/2022
- *      Author: danie
  	C = 0
 	while( A >= B ) {
 		A = A - B
