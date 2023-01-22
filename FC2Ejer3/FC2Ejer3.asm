@@ -11,6 +11,7 @@
 		y = y-2;
 	}
  */
+ 
  .global start
  .data
  X:		.word 0x05
