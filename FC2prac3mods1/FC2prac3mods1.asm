@@ -4,6 +4,7 @@
  *  Created on: 05/04/2022
  */
 
+
 .extern _stack
 .global start
 .equ N,8 @ Constante global que delimita el tamaño de los arrays
