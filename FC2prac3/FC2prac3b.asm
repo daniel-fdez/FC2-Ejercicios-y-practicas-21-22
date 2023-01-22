@@ -2,19 +2,18 @@
  * FC2prac3b.asm
  *
  *  Created on: 21/03/2022
- *      Author: danie
  */
  // APARTADO B
 /*
 .extern _stack
 .global start
-.equ N,8 @ Constante global que delimita el tama駉 de los arrays
+.equ N,8 @ Constante global que delimita el tama帽o de los arrays
 .data
-A: .word 7,3,25,4,75,2,1,1 @ Array en el que buscar el valor m醲imo
+A: .word 7,3,25,4,75,2,1,1 @ Array en el que buscar el valor m谩ximo
 .bss
 B: .space 4*N @ Array en el que guardar el array A ordenado de mayor a menor
-max: .space 4 @ Variable que guarda el valor m醲imo de A
-ind: .space 4 @ Variable que guarda la posici髇 del valor m醲imo de A
+max: .space 4 @ Variable que guarda el valor m谩ximo de A
+ind: .space 4 @ Variable que guarda la posici贸n del valor m谩ximo de A
 .text
 start:
 		ldr sp, =_stack @ sp = &_stack
@@ -26,9 +25,9 @@ start:
 
 for1:	cmp r5, r2 @ Se compara j con N
 		bge endfor1 @ Salta si j >= N
-		bl MAX @ Salta a MAX y en lr se guarda la dir de mem de la siguiente instrucci髇
+		bl MAX @ Salta a MAX y en lr se guarda la dir de mem de la siguiente instrucci贸n
 		ldr r6, =ind @ r6 = &ind
-		str r0, [r6] @ ind = valor de retorno de la funci髇 MAX
+		str r0, [r6] @ ind = valor de retorno de la funci贸n MAX
 		ldr r7, [r1,r0,lsl#2] @ r7 = A(ind)
 		str r7, [r4,r5,lsl#2] @ Se escribe A(ind) en la pos de mem de B(j)
 		mov r7, #0
@@ -38,10 +37,10 @@ for1:	cmp r5, r2 @ Se compara j con N
 
 endfor1:b .
 
-MAX:	push {r4-r8,fp,lr} @ Se guardan los valores de los registros que se usan en la funci髇 MAX
-		@ Guardo lr por si en las modificaciones es necesario llamar a otra funci髇 dentro de MAX
-		add fp, sp, #24 @ Se ajusta el marco de pila en funci髇 de los registros que se usen
-		@ 24 = 4(bytes)*(7(n篲reg_usados)-1(registro))
+MAX:	push {r4-r8,fp,lr} @ Se guardan los valores de los registros que se usan en la funci贸n MAX
+		@ Guardo lr por si en las modificaciones es necesario llamar a otra funci贸n dentro de MAX
+		add fp, sp, #24 @ Se ajusta el marco de pila en funci贸n de los registros que se usen
+		@ 24 = 4(bytes)*(7(n潞_reg_usados)-1(registro))
 		mov r4, #0 @ i = 0
 		ldr r5, =max @ r5 = &max
 		mov r6, #0 @ max = 0
@@ -60,9 +59,9 @@ if:		cmp r8, r6 @ Comparo A(i) con max
 endif:	add r4, r4, #1 @ i++
 		b for
 
-endfor:	mov r0, r7 @ r0 = r7 = 韓dice del valor m醲imo del vector (r0 = registro de retorno de MAX)
-		sub sp, fp, #24 @ Reestablece el marco de la pila a como estaba antes de llamar a la funci髇 MAX
+endfor:	mov r0, r7 @ r0 = r7 = 铆ndice del valor m谩ximo del vector (r0 = registro de retorno de MAX)
+		sub sp, fp, #24 @ Reestablece el marco de la pila a como estaba antes de llamar a la funci贸n MAX
 		pop {r4-r8,fp,lr} @ Se restauran los valores de los registros usados en MAX
-		mov pc, lr @ Se actualiza el pc para que ejecute la siguiente instrucci髇 despu閟 de MAX
+		mov pc, lr @ Se actualiza el pc para que ejecute la siguiente instrucci贸n despu茅s de MAX
 		.end
 */
