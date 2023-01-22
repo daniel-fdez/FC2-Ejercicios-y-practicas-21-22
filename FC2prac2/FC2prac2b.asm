@@ -19,6 +19,7 @@
 		A[ind]=0;
 	}
  */
+ 
 .global start
 .equ N,8
 .data
